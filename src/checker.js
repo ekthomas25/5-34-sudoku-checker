@@ -1,4 +1,4 @@
-export default function differnetNums(array) {
+export function differnetNums(array) {
   let arrayNums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
   for (let i = 1; i < array.length; i++) {
     if (array.includes(array[i])) {
@@ -10,3 +10,6 @@ export default function differnetNums(array) {
   return true;
 };
 
+export function checkArray(array) {
+  return false;
+}
