@@ -13,4 +13,8 @@ describe(checkArray, () => {
   test('It should check one array to see if there is a false in that array', () => {
     expect(checkArray([true, false, false, true])).toEqual(false);
   });
+
+  test('should check one array to see if all elements are true in that array', () => {
+    expect(checkArray([true, true, true, true])).toEqual(true);
+  });
 });
