@@ -1,15 +1,23 @@
-export function differnetNums(array) {
+export function differentNums(array) {
+  let returnStatement = true
   let arrayNums = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  for (let i = 1; i < array.length; i++) {
-    if (array.includes(array[i])) {
+  for (let i = 0; i < array.length; i++) {
+    if (arrayNums.includes(array[i])) {
       arrayNums.splice(arrayNums.indexOf(array[i]), 1);
+      console.log(arrayNums)
     } else {
-        return false;
+        returnStatement = false;
     }
   }
-  return true;
+  return returnStatement;
 };
 
 export function checkArray(array) {
-  return false;
-}
+  let returnStatement = true
+  array.forEach(function(element) {
+    if (!element) {
+      returnStatement = false;
+    }
+  });
+  return returnStatement;
+};

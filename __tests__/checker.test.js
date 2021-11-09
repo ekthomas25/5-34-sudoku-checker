@@ -1,10 +1,14 @@
-import { differnetNums } from './../src/checker.js';
+import { differentNums } from './../src/checker.js';
 import { checkArray } from './../src/checker.js';
 
-describe(differnetNums, () => {
+describe(differentNums, () => {
 
   test('should take an array of numbers and return true if they are all different', () => {
-    expect(differnetNums([1,2,3,4,5,6,7,8,9])).toEqual(true); 
+    expect(differentNums([1,2,3,4,5,6,7,8,9])).toEqual(true); 
+  });
+
+  test('should take an array of numbers and return false if a number repeats', () => {
+    expect(differentNums([1,1,2,3,4,5,6,7,8])).toEqual(false);
   });
 });
 
